@@ -1,0 +1,52 @@
+@using BeltExam.Models
+@model User
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Register</title>
+        <meta charset="UTF-8">
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="/socket.io/socket.io.js"></script>-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/css/register.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>Dojo Activities</h1>
+            <h6>Create an account</h6>
+            <form id="register" asp-action="NewUser" asp-controller="home" method="post">
+                <div id="left">
+                    <p>First name:</p>
+                    <p>Last name:</p>
+                    <p>Email:</p>
+                    <p>Password:</p>
+                    <p>Confirm password:</p>
+                </div>
+                <div id="right">
+                    <div class="inputdiv">
+                        <input type="text" asp-for="FName">
+                        <span class="error" asp-validation-for="FName"></span>
+                    </div>
+                    <div class="inputdiv">
+                        <input type="text" asp-for="LName">
+                        <span class="error" asp-validation-for="LName"></span>
+                    </div>
+                    <div class="inputdiv">
+                        <input type="text" asp-for="Email">
+                        <span class="error" asp-validation-for="Email"></span>
+                    </div>
+                    <div class="inputdiv">
+                        <input type="password" asp-for="Password">
+                        <span class="error" asp-validation-for="Password"></span>
+                    </div>
+                    <div class="inputdiv">
+                        <input type="password" asp-for="ConfirmPassword">
+                        <span class="error" asp-validation-for="ConfirmPassword"></span>
+                    </div>
+                    <input class="btn btn-primary btn-sm" type="submit" value="Register">
+                    <p class="error">@ViewBag.error</p>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

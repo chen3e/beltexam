@@ -1,0 +1,17 @@
+#wrapper{
+    padding: 30px;
+    background-color: rgb(234, 242, 247);
+    height: 100vh;
+}
+
+#links{
+    float: right;
+}
+
+#links > *, #actions > *{
+    margin-right: 20px;
+}
+
+#desc > *{
+    display: inline-block;
+}

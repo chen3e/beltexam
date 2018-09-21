@@ -1,0 +1,55 @@
+@using BeltExam.Models
+@model Event
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Activity Dashboard</title>
+        <meta charset="UTF-8">
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="/socket.io/socket.io.js"></script>-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/css/new.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="links">
+                <a asp-action="Dashboard">Home</a>
+                <a href="/logoff">Log off</a>
+            </div>
+            <h2>Dojo Activity Center</h2>
+            <form asp-action="AddEvent" asp-controller="home" method="post">
+                <h4>Create an activity!</h4>
+                <div id="right">
+                    <p>Name:</p>
+                    <p>Date:</p>
+                    <p>Time:</p>
+                    <p>Duration:</p>
+                    <p>Description:</p>
+                    <input class="btn btn-warning btn-sm" type="submit" value="Create">
+                </div>
+                <div id="right">
+                    <input type="text" asp-for="EventName">
+                    <input type="date" asp-for="Date">
+                    <input type="time" asp-for="Time">
+                    <div id="durationInput">
+                        <input type="number" asp-for="DurationNumber">
+                        <select asp-for="DurationType">
+                            <option value="days">Days</option>
+                            <option value="hours">Hours</option>
+                            <option value="minutes">Minutes</option>
+                        </select>
+                        <p>@ViewBag.error</p>
+                    </div>
+                    <textarea id="desc" asp-for="Description"></textarea>
+                </div>
+                <div id="errors">
+                    <span class="error" asp-validation-for="EventName"></span>
+                    <span class="error" asp-validation-for="Date"></span>
+                    <span class="error" asp-validation-for="Time"></span>
+                    <span class="error" asp-validation-for="DurationNumber"></span>
+                    <span class="error" asp-validation-for="DurationType"></span>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

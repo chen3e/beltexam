@@ -1,0 +1,32 @@
+﻿@using BeltExam.Models
+@model User
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Dojo Activities</title>
+        <meta charset="UTF-8">
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="/socket.io/socket.io.js"></script>-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/css/index.css">
+    </head>
+    <body>
+        <div id="wrapper">
+            <h1>Welcome to the Dojo Activity Center</h1>
+            <h6>Welcome to the activity center! You can log in below:</h6>
+            <form asp-action="login" asp-controller="home" method="post">
+                <div id="left">
+                    <p>Email</p>
+                    <p>Password</p>
+                </div>
+                <div id="right">
+                    <input type="text" asp-for="Email">
+                    <input type="password" asp-for="Password">
+                    <input class="btn btn-primary btn-sm" type="submit" value="Log in">
+                </div>
+            </form>
+            <p class="error">@ViewBag.error</p>
+            <p>Don't have an account? <a href="/register">Create one now!</a></p>
+        </div>
+    </body>
+</html>

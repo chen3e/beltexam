@@ -1,0 +1,38 @@
+#wrapper{
+    padding: 30px;
+    background-color: rgb(234, 242, 247);
+    height: 100vh;
+}
+
+h6{
+    margin-bottom: 20px;
+}
+
+#left, #right{
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 8px;
+}
+
+#left > *, #right > *{
+    display: block;
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+#left > *{
+    position: relative;
+    top: 3px;
+}
+
+.btn{
+    margin-top: 15px;
+}
+
+form{
+    margin-bottom: 10px;
+}
+
+.error{
+    color: red;
+}

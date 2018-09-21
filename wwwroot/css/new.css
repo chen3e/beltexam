@@ -1,0 +1,41 @@
+#wrapper{
+    padding: 30px;
+    background-color: rgb(234, 242, 247);
+    height: 100vh;
+}
+#links{
+    float: right;
+}
+
+#links > *{
+    margin-right: 20px;
+}
+
+#left, #right, #errors{
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+}
+
+#left > *, #right > *, #errors > *{
+    display: block;
+    margin-bottom: 10px;
+    height: 30px;
+}
+
+select{
+    height: 30px;
+}
+
+#desc{
+    min-width: 300px;
+    height: 120px;
+}
+
+.error{
+    color: red;
+}
+
+.btn{
+    margin-top: 100px;
+}

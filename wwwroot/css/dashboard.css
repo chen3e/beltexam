@@ -1,0 +1,19 @@
+#wrapper{
+    padding: 30px;
+    background-color: rgb(234, 242, 247);
+    height: 100vh;
+}
+
+#logoff{
+    float: right;
+}
+
+table{
+    width: 80%;
+    border: 1px solid black;
+}
+
+th, td{
+    border: 1px solid black;
+    padding: 5px;
+}
